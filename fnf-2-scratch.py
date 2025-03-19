@@ -3,6 +3,7 @@ from tkinter import filedialog, messagebox, ttk
 import json
 import os
 import re
+import sys
 
 class CSSParser:
     """Simple CSS parser to apply styles to Tkinter widgets"""
@@ -86,10 +87,26 @@ class CSSParser:
         return color
 
 class FNFtoScratchConverter:
-    def __init__(self, css_file="fnf_scratch_styles.css"):
+    def __init__(self):
         self.window = tk.Tk()
         self.window.title("FNF to Scratch Chart Converter")
         self.window.geometry("600x500")
+        
+        # Get the directory where the script is running from
+        if getattr(sys, 'frozen', False):
+            # If the application is run as a bundle (compiled with PyInstaller)
+            self.app_path = sys._MEIPASS
+        else:
+            # If the application is run as a script
+            self.app_path = os.path.dirname(os.path.abspath(__file__))
+        
+        # Look for CSS file in the application directory
+        css_file = os.path.join(self.app_path, "fnf-scratch-styles.css")
+        
+        # Check if CSS file exists
+        if not os.path.exists(css_file):
+            messagebox.showerror("Error", f"CSS file not found: {css_file}\nPlease ensure 'fnf-scratch-styles.css' is in the same directory as the application.")
+            sys.exit(1)
         
         # Load CSS styles
         self.css = CSSParser(css_file)
@@ -188,6 +205,8 @@ class FNFtoScratchConverter:
         self.chart_data = None
         self.chart_type = None  # "json" or "txt"
         self.file_path = None
+    
+
 
     def load_chart(self):
         file_path = filedialog.askopenfilename(filetypes=[("JSON files", "*.json")])
