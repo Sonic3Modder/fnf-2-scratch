@@ -1,0 +1,126 @@
+/* FNF to Scratch Converter Theme CSS */
+/* This will be parsed by the Python app */
+
+/* Main window */
+.window {
+    background-color: #2C2F33;
+    padding: 10px;
+}
+
+/* Header styles */
+.header {
+    background-color: #1E2124;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+}
+
+.header-text {
+    color: #FFFFFF;
+    font-family: "Arial";
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Main content area */
+.content {
+    background-color: #36393F;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Button styles */
+.button-fnf {
+    background-color: #9933FF;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button-fnf:hover {
+    background-color: #7B2CBF;
+}
+
+.button-scratch {
+    background-color: #FF8C1A;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button-scratch:hover {
+    background-color: #E67300;
+}
+
+.button-text {
+    background-color: #33CCFF;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button-text:hover {
+    background-color: #2BA8DD;
+}
+
+/* Label styles */
+.label {
+    color: #FFFFFF;
+    font-family: "Arial";
+    font-size: 12px;
+}
+
+.label-header {
+    color: #FFFFFF;
+    font-family: "Arial";
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Input fields */
+.entry {
+    background-color: #40444B;
+    color: #FFFFFF;
+    border-radius: 3px;
+    border: 1px solid #202225;
+    padding: 5px;
+}
+
+/* Preview text area */
+.preview {
+    background-color: #40444B;
+    color: #FFFFFF;
+    border: 1px solid #202225;
+    border-radius: 3px;
+    font-family: "Courier New";
+    padding: 5px;
+}
+
+/* Status bar */
+.status {
+    background-color: #202225;
+    color: #AAAAAA;
+    padding: 5px;
+    font-size: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #1E2124;
+    color: #AAAAAA;
+    padding: 8px;
+    font-size: 10px;
+    text-align: center;
+}
